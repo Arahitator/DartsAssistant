@@ -1,0 +1,14 @@
+[project]
+name = "dartsassistant"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "natasha==0.10.0",
+    "python-dotenv>=1.1.0",
+    "pyttsx3>=2.98",
+    "speechrecognition[audio,google-cloud]>=3.14.3",
+    "vosk>=0.3.45",
+    "yargy==0.12.0",
+]
