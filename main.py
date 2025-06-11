@@ -86,14 +86,16 @@ class Game501:
         return tuple(players)
 
     @staticmethod
-    def _get_number_from_text(text: str) -> int | None:
+    def _get_number_from_text(text: str | None) -> int | None:
         extractor = NumberExtractor()
         text = extractor.replace_groups(text)
         if not text:
             return None
+
         result = re.findall(r"\d+", text)
         if len(result) != 1:
             return None
+        
         return int(result[0])
 
     def _announce_player(self):
