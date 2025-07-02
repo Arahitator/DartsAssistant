@@ -95,7 +95,7 @@ class Game501:
         result = re.findall(r"\d+", text)
         if len(result) != 1:
             return None
-        
+
         return int(result[0])
 
     def _announce_player(self):
@@ -127,7 +127,6 @@ class Game501:
         player_score = self.scores[self.current_player]
         player_score -= throw_value
         if player_score < 0:
-            print(1)
             self.scores[self.current_player] += sum(self.current_turn)
             self.talker.speak("Перебор")
             self._switch_player()
